@@ -34,13 +34,7 @@ class QuizQuestion extends Component {
             this.props.showNextQuestionHandler()
         }
 
-        this.setIncorrectAnswerState(!isCorrectAnswer);
-    }
-
-    setIncorrectAnswerState(newIncorrectAnswerValue) {
-        this.setState(() => {
-            return {incorrectAnswer: newIncorrectAnswerValue}
-        })
+        this.setState({incorrectAnswer: !isCorrectAnswer})
     }
 }
 
